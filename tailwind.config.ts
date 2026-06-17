@@ -11,8 +11,8 @@ const config: Config = {
         brandLime: "#9fbf2a"
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        heading: ["Outfit", "sans-serif"]
+        sans: ["var(--font-inter)", "Inter", "sans-serif"],
+        heading: ["var(--font-outfit)", "Outfit", "sans-serif"]
       }
     }
   },

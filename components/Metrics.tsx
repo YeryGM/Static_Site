@@ -1,8 +1,14 @@
 import AnimatedCounter from "./AnimatedCounter";
 
-const metrics = [
+type Metric = {
+  target: number;
+  label: string;
+  prefix?: string;
+};
+
+const metrics: Metric[] = [
   { target: 10, label: "Camiones" },
-  { target: 150, label: "Apoyos", sufix: "+" },
+  { target: 150, label: "Apoyos", prefix: "+" },
   { target: 5, label: "Paises conectados" }
 ];
 
@@ -15,8 +21,8 @@ export default function Metrics() {
             <div className="metric-group" key={metric.label}>
               <div className={`stat-item reveal reveal-scale delay-${index + 1}`}>
                 <div className="stat-wrapper">
+                  {metric.prefix && <span className="stat-prefix">{metric.prefix}</span>}
                   <AnimatedCounter target={metric.target} className="stat-number" />
-                  {metric.suffix && <span className="stat-suffix">{metric.suffix}</span>}
                 </div>
                 <span className="stat-label">{metric.label}</span>
               </div>

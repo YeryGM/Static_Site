@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Preloader() {
   const [visible, setVisible] = useState(true);
@@ -31,7 +32,7 @@ export default function Preloader() {
         <div className="spin-container">
           <div className="spinner" />
           <div className="preloader-logo-wrapper">
-            <img src="/images/brand/transfribol-logo-round.png" alt="Logo Transfribol" className="preloader-logo" />
+            <Image src="/images/brand/transfribol-logo-round.png" alt="Logo Transfribol" width={210} height={210} className="preloader-logo" />
           </div>
         </div>
         <div className="loading-text">Cargando...</div>

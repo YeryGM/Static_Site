@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Icon from "./Icons";
 import { WHATSAPP_NUMBER } from "./data";
 
@@ -20,7 +21,7 @@ export default function QuoteBanner() {
           </div>
           <div className="unete-image">
             <div className="quote-image-wrapper">
-              <img src="/images/sections/equipo/transfribol-driver.png" alt="Asesor Transclabol" />
+              <Image src="/images/sections/equipo/transfribol-driver.png" alt="Asesor Transfribol" width={320} height={400} />
             </div>
           </div>
         </div>

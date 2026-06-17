@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimatedCounter from "./AnimatedCounter";
 import { fleetCards } from "./data";
 
@@ -8,7 +9,7 @@ export default function Fleet() {
         <div className="container">
           <div className="flota-hero reveal reveal-up">
             <div className="flota-img-side">
-              <img src="/images/sections/flota/transfribol-fleet-volvo.jpg" alt="Camiones TRANSFRIBOL Volvo" className="fleet-hero-img" />
+              <Image src="/images/sections/flota/transfribol-fleet-volvo.jpg" alt="Camiones TRANSFRIBOL Volvo" width={600} height={400} className="fleet-hero-img" />
             </div>
             <div className="flota-stats-side">
               <h2>
@@ -33,8 +34,8 @@ export default function Fleet() {
         {fleetCards.map((card, index) => (
           <article className={`truck-gallery-item reveal reveal-scale delay-${index + 1}`} key={card.name}>
             <div className="img-carousel">
-              <img src={card.images[0]} alt={card.alt} className="img-1" />
-              <img src={card.images[1]} alt={`${card.name} render TRANSFRIBOL`} className="img-2" />
+              <Image src={card.images[0]} alt={card.alt} fill className="img-1" sizes="(max-width: 768px) 100vw, 33vw" />
+              <Image src={card.images[1]} alt={`${card.name} render TRANSFRIBOL`} fill className="img-2" sizes="(max-width: 768px) 100vw, 33vw" />
             </div>
             <div className="truck-label">
               <span className="truck-qty">{card.quantity}</span>

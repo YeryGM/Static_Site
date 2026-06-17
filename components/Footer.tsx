@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Icon from "./Icons";
 import { navItems } from "./data";
 
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="#hero" className="footer-logo">
-              <img src="/images/brand/transfribol-logo.jpg" alt="TRANSFRIBOL S.R.L. Logo" className="footer-logo-img" />
+              <Image src="/images/brand/transfribol-logo.jpg" alt="TRANSFRIBOL S.R.L. Logo" width={70} height={70} className="footer-logo-img" />
               <span className="footer-logo-text">
                 <span className="brand-name">TRANSFRIBOL</span>
                 <span className="brand-suffix">S.R.L.</span>

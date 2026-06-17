@@ -3,7 +3,9 @@
 import Icon, { type IconName } from "./Icons";
 import { services } from "./data";
 
-const serviceDescriptions: Record<string, string> = {
+type ServiceTitle = (typeof services)[number]["title"];
+
+const serviceDescriptions: Record<ServiceTitle, string> = {
   "Carga especial": "Manejo seguro de mercancia delicada.",
   Maquinaria: "Transporte de equipos industriales.",
   "Cargas pesadas": "Soluciones para gran volumen.",
@@ -35,6 +37,9 @@ export default function Services() {
               className={`service-item reveal reveal-scale delay-${(index % 3) + 1}`}
               key={service.title}
               onClick={scrollToGallery}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") scrollToGallery(); }}
             >
               <div className="service-circle">
                 <Icon name={service.icon as IconName} className="service-svg" />

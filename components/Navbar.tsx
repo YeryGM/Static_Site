@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { navItems, WHATSAPP_LINK } from "./data";
 
 export default function Navbar() {
@@ -23,7 +24,7 @@ export default function Navbar() {
     <nav className={`navbar fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "scrolled bg-white shadow-lg" : "bg-transparent"}`} id="navbar">
       <div className="container nav-container">
         <a href="#hero" className="nav-logo" onClick={() => setOpen(false)}>
-          <img src="/images/brand/transfribol-logo.jpeg" alt="TRANSFRIBOL S.R.L. Logo" className="nav-logo-img" />
+          <Image src="/images/brand/transfribol-logo.jpeg" alt="TRANSFRIBOL S.R.L. Logo" width={80} height={80} className="nav-logo-img" />
           <span className="nav-logo-text items-center">
             <span className="brand-name">TRANSFRIBOL</span>
             <span className="brand-suffix">S.R.L.</span>

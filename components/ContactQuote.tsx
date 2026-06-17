@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Image from "next/image";
 import Icon from "./Icons";
 import { WHATSAPP_LINK, WHATSAPP_NUMBER } from "./data";
 
@@ -56,7 +57,7 @@ export default function ContactQuote() {
           <div className="card-overlay" />
           <div className="card-content">
             <div className="contact-logo-wrapper">
-              <img src="/images/brand/transfribol-logo.jpeg" alt="Logo Transfribol" className="contact-logo" />
+              <Image src="/images/brand/transfribol-logo.jpeg" alt="Logo Transfribol" width={240} height={240} className="contact-logo" />
             </div>
             <div className="contact-text-center">
               <h3>¿Tienes dudas?</h3>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { clientLogos } from "./data";
 
 export default function Clients() {
@@ -18,7 +19,7 @@ export default function Clients() {
         <div className="marquee-track">
           {logos.map((logo, index) => (
             <div className="client-logo-wrapper" key={`${logo.src}-${index}`}>
-              <img src={logo.src} alt={logo.alt} loading="lazy" />
+              <Image src={logo.src} alt={logo.alt} width={180} height={100} style={{ objectFit: "contain" }} />
             </div>
           ))}
         </div>
